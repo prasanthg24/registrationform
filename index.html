@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <script type ="text/javascript" >
+    function validation()
+    {
+        var name=document.getElementById("name");
+        var email=document.getElementById("email");
+        var phoneno=document.getElementById("phoneno");
+        if(name.value.trim()== "")
+        {
+            alert("Please fill the name");
+            return false;
+        }
+        else if(email.value.trim()=="")
+        {
+            alert("Please fill the Email Id");
+            return false;
+        }
+        else if (date=="")
+        {
+            alert("Fill the Date");
+            return false;
+        }
+        else if (phoneno.value.trim() == "")
+        {
+            alert ("Fill the Phone no");
+            return false;
+        }
+        else if(password.value.trim()=="")
+        {
+            alert("Please fill the Password");
+            return false;
+        }
+        else if(password.value.trim().length<5)
+        {
+            alert("Password is too short");
+            return false;
+        }
+        
+        else{
+            true;
+        }
+    }
+    </script>
+    <style>
+        h1{
+            color:black;
+            text-decoration:underline ;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        div{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: solid crimson 10px;
+        padding: 20px;
+        background-color:rgb(35, 211, 211);
+        display: flex;
+        border-radius: 2px;
+        
+         width: 400px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        
+    <form id ="form1" action="welcome.html" onsubmit="return validation()" autocomplete="off" >
+        <h1>Form Registration</h1>
+        <label>Name</label>
+        <input id ="name" placeholder="Enter the Name  " type="text" >
+        <br><br>
+        <label>Email</label>
+        <input id="email" placeholder = "Enter Email Id" type="text">
+        <br><br>
+        <label >Dob</label>
+        <input type="date" id="date" >
+        <br><br>
+        <label >Phone No</label>
+        <input type="number" name="phoneno" id="phoneno" placeholder="Enter the Phone No">
+        <br><br>
+        <label >Password</label>
+        <input type="password" id="password" placeholder="Enter the Password">
+        <br><br>
+        <input  type="submit"></input>
+    </form>
+</div>
+</body>
+</html>
